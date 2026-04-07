@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 
  class Figure{
 	int x, y;
