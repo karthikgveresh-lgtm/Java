@@ -23,12 +23,18 @@ class DemoFactoryDesign {
     public static Shape getShape(String type) {
         if (type.equals("CIRCLE")) return new Circle();
         if (type.equals("SQUARE")) return new Square();
-        Shape s = DemoFactoryDesign.getShape("CIRCLE");
-        s.draw();
         return null;
     }
-}
 
+public class FactoryDesign{
+    public static void main(String[] args) {
+        Shape shape1 = DemoFactoryDesign.getShape("CIRCLE");
+        shape1.draw();
+        Shape shape2 = DemoFactoryDesign.getShape("SQUARE");
+        shape2.draw();
+    }
+}
+}
 // Avoid multiple new keywords
 // Reduce tight coupling
 // Easy to add new types without breaking code
