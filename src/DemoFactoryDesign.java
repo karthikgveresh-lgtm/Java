@@ -29,6 +29,8 @@ class DemoFactoryDesign {
     }
 }
 
-
+// Avoid multiple new keywords
+// Reduce tight coupling
+// Easy to add new types without breaking code
 
 
