@@ -9,8 +9,13 @@ class User {
         this.name = name;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
 
 class Movie {
@@ -24,9 +29,17 @@ class Movie {
         this.duration = duration;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public int getDuration() { return duration; }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
 }
 
 class City {
@@ -36,7 +49,9 @@ class City {
         this.name = name;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 }
 
 class Theatre {
@@ -52,10 +67,21 @@ class Theatre {
         this.screens = screens;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public City getCity() { return city; }
-    public List<Screen> getScreens() { return screens; }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public List<Screen> getScreens() {
+        return screens;
+    }
 }
 
 class Screen {
@@ -67,7 +93,10 @@ class Screen {
         this.seats = seats;
     }
 
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
+
     public List<Seat> getSeats() {
         return seats;
     }
@@ -86,10 +115,14 @@ class Seat {
         this.type = type;
     }
 
-    public int getSeatId() { return seatId; }
-    public SeatType getType() { return type; }
-}
+    public int getSeatId() {
+        return seatId;
+    }
 
+    public SeatType getType() {
+        return type;
+    }
+}
 
 class Show {
     private int showId;
@@ -110,10 +143,21 @@ class Show {
         }
     }
 
-    public int getShowId() { return showId; }
-    public Movie getMovie() { return movie; }
-    public Screen getScreen() { return screen; }
-    public Date getStartTime() { return startTime; }
+    public int getShowId() {
+        return showId;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public Screen getScreen() {
+        return screen;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
 
     public synchronized boolean bookSeat(Seat seat) {
         if (seatAvailability.get(seat)) {
@@ -130,7 +174,7 @@ class Booking {
     private Show show;
     private List<Seat> seats;
     private BookingStatus status;
-    
+
     public Booking(int bookingId, User user, Show show, List<Seat> seats) {
         this.bookingId = bookingId;
         this.user = user;
@@ -139,11 +183,25 @@ class Booking {
         this.status = BookingStatus.CREATED;
     }
 
-    public int getBookingId() { return bookingId; }
-    public User getUser() { return user; }
-    public Show getShow() { return show; }
-    public List<Seat> getSeats() { return seats; }
-    public BookingStatus getStatus() { return status; }
+    public int getBookingId() {
+        return bookingId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Show getShow() {
+        return show;
+    }
+
+    public List<Seat> getSeats() {
+        return seats;
+    }
+
+    public BookingStatus getStatus() {
+        return status;
+    }
 
     public void setStatus(BookingStatus status) {
         this.status = status;
@@ -161,7 +219,9 @@ class Payment {
         this.paymentId = paymentId;
     }
 
-    public int getPaymentId() { return paymentId; }
+    public int getPaymentId() {
+        return paymentId;
+    }
 
     public boolean pay(double amount) {
         return true; // assume success
@@ -195,8 +255,6 @@ class BookingService {
         return booking;
     }
 }
-
-
 
 public class BookMyShow {
     public static void main(String[] args) {
