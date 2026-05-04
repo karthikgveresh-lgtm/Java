@@ -29,8 +29,8 @@ class User {
     // Builder Class
     public static class Builder {
         private final String name; // required
-        private int age;           // optional
-        private String city;       // optional
+        private int age; // optional
+        private String city; // optional
 
         public Builder(String name) {
             if (name == null || name.isEmpty()) {

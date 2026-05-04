@@ -19,24 +19,25 @@ class Square implements Shape {
     }
 }
 
-class DemoFactoryDesign {
+class shapeFactory {
     public static Shape getShape(String type) {
-        if (type.equals("CIRCLE")) return new Circle();
-        if (type.equals("SQUARE")) return new Square();
+        if (type.equals("CIRCLE"))
+            return new Circle();
+        if (type.equals("SQUARE"))
+            return new Square();
         return null;
     }
+}
 
-public class FactoryDesign{
+public class FactoryDesign {
     public static void main(String[] args) {
-        Shape shape1 = DemoFactoryDesign.getShape("CIRCLE");
+        Shape shape1 = shapeFactory.getShape("CIRCLE");
         shape1.draw();
-        Shape shape2 = DemoFactoryDesign.getShape("SQUARE");
+        Shape shape2 = shapeFactory.getShape("SQUARE");
         shape2.draw();
     }
 }
-}
+
 // Avoid multiple new keywords
 // Reduce tight coupling
 // Easy to add new types without breaking code
-
-

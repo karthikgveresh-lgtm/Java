@@ -1,17 +1,19 @@
-interface  A{
+interface A {
     void m1();
+
     void m2();
 }
 
-interface B{
+interface B {
     void m3();
+
     void m4();
 }
 
-class C implements A, B{
+class C implements A, B {
     @Override
     public void m1() {
-        System.out.println("Inside m1 method");
+        System.out.println("Inside m1  of c method");
     }
 
     @Override
@@ -39,9 +41,10 @@ public class DemoInterface3 {
         c.m4();
         A a = new C();
         a.m1();
+        a.m2();
         B b = new C();
         b.m3();
 
     }
-    
+
 }
